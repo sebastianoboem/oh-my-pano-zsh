@@ -24,6 +24,10 @@ alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;"
 alias printdropboxconflict="find ~/Dropbox -path '*(Copia in conflitto di * [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*' -print"
 alias cleandropboxconflict="find ~/Dropbox -path '*(Copia in conflitto di * [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*' -exec rm -f {} \;"
 
+# folder
+alias home="cd ~" 
+alias www="cd /Applications/MAMP/htdocs"
+
 # Oh My Zsh and Oh My Pano Zsh
 alias ohmyzsh="cd ~/.oh-my-zsh"
 alias ohmypanozsh="cd ~/.oh-my-pano-zsh"
