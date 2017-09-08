@@ -24,13 +24,17 @@ alias flushdns="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;"
 alias printdropboxconflict="find ~/Dropbox -path '*(Copia in conflitto di * [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*' -print"
 alias cleandropboxconflict="find ~/Dropbox -path '*(Copia in conflitto di * [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]*' -exec rm -f {} \;"
 
-# folder
-alias home="cd ~" 
-alias www="cd /Applications/MAMP/htdocs"
+# general folder
+alias home="cd ~"
+
+# Enter themes folder or specific theme folder
+theme() {
+  cd /Applications/MAMP/htdocs/$1/wp-content/themes/$2
+}
 
 # Oh My Zsh and Oh My Pano Zsh
 alias ohmyzsh="cd ~/.oh-my-zsh"
-alias ohmypanozsh="cd ~/.oh-my-pano-zsh"
+alias ohmypanozsh="cd ~/.oh-my-pano-zsh/ && st oh-my-pano-zsh.zsh"
 
 # Vagrant
 alias vau="vagrant up"
@@ -40,6 +44,8 @@ alias var="vagrant reload"
 alias vaup="vagrant up --provision"
 alias vass="vagrant ssh"
 alias vabu="vagrant box update"
+alias vabak="cp -R .vagrant .vagrantbak"
+alias vad="vagrant destroy"
 
 # Themes folder aliases
 alias bedsage="cd web/app/themes/sage"
@@ -51,3 +57,9 @@ alias wpshaba="cd wp-content/themes/shaba"
 alias _davidemaule-trellis="cd ~/Projects/davidemaule/_trellis-davidemaule.com"
 alias davidemaule="cd ~/Projects/davidemaule/davidemaule.com"
 alias davidemaule-minerva="cd ~/Projects/davidemaule/minerva.davidemaule.com"
+
+# Android dDebug Bridge
+alias adb='~/Library/Android/sdk/platform-tools/adb'
+
+# Slate
+alias bld='bundle exec middleman build --clean'
