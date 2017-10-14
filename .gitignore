@@ -1,7 +1,7 @@
 # Plugins
-plugins/*
-!plugins/.gitkeep
+# plugins/*
+# !plugins/.gitkeep
 
 # Themes
-themes/*
-!themes/.gitkeep
+# themes/*
+# !themes/.gitkeep
