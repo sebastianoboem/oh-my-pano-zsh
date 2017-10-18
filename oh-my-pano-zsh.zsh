@@ -63,3 +63,6 @@ alias adb='~/Library/Android/sdk/platform-tools/adb'
 
 # Slate
 alias bld='bundle exec middleman build --clean'
+
+# Python
+alias py="python"
