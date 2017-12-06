@@ -27,9 +27,36 @@ alias cleandropboxconflict="find ~/Dropbox -path '*(Copia in conflitto di * [0-9
 # general folder
 alias home="cd ~"
 
-# Enter themes folder or specific theme folder
-theme() {
-  cd /Applications/MAMP/htdocs/$1/wp-content/themes/$2
+# Enter sage themes folder
+sage() {
+  if [ -z $2 ]; then
+    cd ~/Projects/$1/$1.it/web/app/themes/sage
+  else
+    cd ~/Projects/$1/$1.$2/web/app/themes/sage
+  fi
+}
+
+# Enter themes folder
+themes() {
+  if [ -z $2 ]; then
+    cd ~/Projects/$1/$1.it/web/app/themes
+  else
+    cd ~/Projects/$1/$1.$2/web/app/themes
+  fi
+}
+
+# Enter bedrock themes folder
+bedrock(){
+  if [ -z $2 ]; then
+    cd ~/Projects/$1/$1.it
+  else
+    cd ~/Projects/$1/$1.$2
+  fi
+}
+
+# Enter trellis themes folder
+trellis(){
+  cd ~/Projects/$1/_trellis-$1
 }
 
 # Oh My Zsh and Oh My Pano Zsh
@@ -47,22 +74,16 @@ alias vabu="vagrant box update"
 alias vabak="cp -R .vagrant .vagrantbak"
 alias vad="vagrant destroy"
 
-# Themes folder aliases
-alias bedsage="cd web/app/themes/sage"
-alias bedshaba="cd web/app/themes/shaba"
-alias wpsage="cd wp-content/themes/sage"
-alias wpshaba="cd wp-content/themes/shaba"
-
-# Davide Maule aliases
-alias _davidemaule-trellis="cd ~/Projects/davidemaule/_trellis-davidemaule.com"
-alias davidemaule="cd ~/Projects/davidemaule/davidemaule.com"
-alias davidemaule-minerva="cd ~/Projects/davidemaule/minerva.davidemaule.com"
-
 # Android dDebug Bridge
 alias adb='~/Library/Android/sdk/platform-tools/adb'
 
-# Slate
-alias bld='bundle exec middleman build --clean'
-
 # Python
 alias py="python"
+
+# Laravel
+alias run='php artisan'
+
+# Yarn
+alias build='yarn run build'
+alias start='yarn run start'
+alias build-production='yarn run build:production'
